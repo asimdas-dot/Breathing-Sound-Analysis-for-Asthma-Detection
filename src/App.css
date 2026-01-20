@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Medical Theme Colors */
+:root {
+  --primary-blue: #2563eb;
+  --primary-dark: #1e40af;
+  --light-blue: #dbeafe;
+  --success-green: #16a34a;
+  --warning-yellow: #eab308;
+  --danger-red: #dc2626;
+}
+
+/* Smooth Transitions */
+input, select, textarea, button {
+  transition: all 0.3s ease;
+}
+
+/* Focus States */
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Button Hover Effects */
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+/* Progress Bar Animation */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-bar {
+  animation: slideIn 0.5s ease;
+}
